@@ -101,6 +101,8 @@ class SingUpActivity : AppCompatActivity() {
                     progressDialog.dismiss()
                     Toast.makeText(this, "El usuario ha sido creado correctamente", Toast.LENGTH_LONG).show()
 
+
+
                     val intent = Intent(this@SingUpActivity, MainActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)

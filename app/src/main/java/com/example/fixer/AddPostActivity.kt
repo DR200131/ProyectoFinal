@@ -93,7 +93,7 @@ class AddPostActivity : AppCompatActivity() {
                         val postId = ref.push().key
 
                         val postMap = HashMap<String, Any>()
-                        postMap["postd"] = postId!!
+                        postMap["postid"] = postId!!
                         postMap["descripcion"] = etD.text.toString()
                         postMap["publisher"] = FirebaseAuth.getInstance().currentUser!!.uid
                         postMap["postimage"] = myUrl
