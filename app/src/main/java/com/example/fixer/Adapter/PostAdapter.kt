@@ -42,6 +42,14 @@ class PostAdapter (private val mContext : Context,
 
         Picasso.get().load(post.getPostimage()).into(holder.postImage)
 
+        if(post.getDescripcion().equals("")){
+            holder.descripcion.visibility == View.GONE
+        }
+        else{
+            holder.descripcion.visibility == View.VISIBLE
+            holder.descripcion.setText(post.getDescripcion())
+        }
+
         publisherInfo(holder.profileimage, holder.nombre, holder.publisher, post.getPublisher())
     }
 
