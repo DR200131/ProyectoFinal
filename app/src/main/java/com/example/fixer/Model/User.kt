@@ -73,9 +73,19 @@ class User {
         return validado
     }
 
+    fun setValidado(validado : String)
+    {
+        this.validado = validado
+    }
+
     fun getTecnico() : String
     {
         return tecnico
+    }
+
+    fun setTecnico(tecnico : String)
+    {
+        this.tecnico = tecnico
     }
 
     fun getImage() : String
@@ -90,12 +100,12 @@ class User {
 
     fun getContraseña() : String
     {
-        return uid
+        return contraseña
     }
 
-    fun setContraseña(uid : String)
+    fun setContraseña(contraseña: String)
     {
-        this.uid = uid
+        this.contraseña = contraseña
     }
 
     fun getUid() : String

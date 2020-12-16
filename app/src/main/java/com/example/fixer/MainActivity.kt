@@ -1,19 +1,14 @@
 package com.example.fixer
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.AutoCompleteTextView
-import android.widget.TextView
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import com.example.fixer.Fragments.InicioFragment
 import com.example.fixer.Fragments.NotificationsFragment
 import com.example.fixer.Fragments.ProfileFragment
 import com.example.fixer.Fragments.SearchFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,6 +25,8 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.nav_add_post -> {
+                item.isChecked = false
+                startActivity(Intent(this@MainActivity, AddPostActivity::class.java))
                 return@OnNavigationItemSelectedListener true
             }
             R.id.nav_notifications -> {
